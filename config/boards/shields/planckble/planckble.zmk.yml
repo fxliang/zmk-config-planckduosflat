@@ -1,0 +1,11 @@
+file_format: "1"
+id: planckble
+name: PlanckDuosFlat
+type: shield
+url: https://github.com/lemon0513/planckblethin.git
+requires: [pro_micro]
+features:
+  - keys
+siblings:
+  - planckble_left
+  - planckble_right
