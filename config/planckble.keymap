@@ -73,8 +73,8 @@
         raise_layer {
 
             bindings = <
-&auto_shift LS(GRAVE) GRAVE  &trans  &mmv MOVE_UP   &trans  &bootloader  &trans  &kp HOME             &kp HOME  &kp PAGE_UP    &kp PG_UP     &kp LC(P)                  &auto_shift LS(GRAVE) GRAVE
-&kp CLCK                     &mmv MOVE_LEFT   &mmv MOVE_DOWN   &mmv MOVE_RIGHT   &trans       &trans  &kp END              &kp END   &kp PAGE_DOWN  &kp PG_DN     &auto_shift LS(LBKT) LBKT  &auto_shift LS(RBKT) RBKT
+&auto_shift LS(GRAVE) GRAVE  &trans  &trans  &trans  &bootloader  &trans  &kp HOME             &kp HOME  &kp PAGE_UP    &kp PG_UP     &kp LC(P)                  &auto_shift LS(GRAVE) GRAVE
+&kp CLCK                     &trans  &trans  &trans   &trans       &trans  &kp END              &kp END   &kp PAGE_DOWN  &kp PG_DN     &auto_shift LS(LBKT) LBKT  &auto_shift LS(RBKT) RBKT
 &trans                       &trans  &trans  &trans  &trans       &trans  &kp LA(F4)           &kp LPAR  &kp RPAR       &bt BT_SEL 0  &bt BT_SEL 1               &bt BT_SEL 2
 &trans                       &trans  &trans  &trans  &trans       &trans  &kp C_AL_CALCULATOR  &trans    &kp LG(L)      &bt BT_SEL 3  &bt BT_SEL 4               &bt BT_CLR
             >;
