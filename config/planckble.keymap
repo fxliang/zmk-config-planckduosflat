@@ -7,6 +7,7 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/pointing.h>
 
 &lt {
     flavor = "balanced";
@@ -17,21 +18,86 @@
     combos {
         compatible = "zmk,combos";
 
-        enter {
-            bindings = <&kp RET>;
+        combo_+ {
+            bindings = <&kp PLUS>;
             key-positions = <17 18>;
             timeout-ms = <50>;
             layers = <0>;
         };
 
-        lshft {
+        combo_lshft {
             bindings = <&kp LSHFT>;
             key-positions = <14 15>;
         };
 
-        rshft {
+        combo_rshft {
             bindings = <&kp RSHFT>;
             key-positions = <20 21>;
+        };
+
+        combo_caps {
+            bindings = <&kp CAPSLOCK>;
+            key-positions = <13 14 15 16>;
+        };
+
+        combo_enter {
+            bindings = <&kp ENTER>;
+            key-positions = <16 19>;
+        };
+
+        combo_left_brace {
+            bindings = <&kp LEFT_BRACE>;
+            key-positions = <3 4>;
+        };
+
+        combo_left_parenthesis {
+            bindings = <&kp LEFT_PARENTHESIS>;
+            key-positions = <15 16>;
+        };
+
+        combo_left_bracket {
+            bindings = <&kp LEFT_BRACKET>;
+            key-positions = <27 28>;
+        };
+
+        combo_right_brace {
+            bindings = <&kp RIGHT_BRACE>;
+            key-positions = <7 8>;
+        };
+
+        combo_right_parenthesis {
+            bindings = <&kp RIGHT_PARENTHESIS>;
+            key-positions = <19 20>;
+        };
+
+        combo_right_bracket {
+            bindings = <&kp RIGHT_BRACKET>;
+            key-positions = <31 32>;
+        };
+
+        combo_plus {
+            bindings = <&kp LS(EQUAL)>;
+            key-positions = <17 18>;
+        };
+
+        combo_minus {
+            bindings = <&kp MINUS>;
+            key-positions = <29 30>;
+        };
+
+        combo_f2 {
+            bindings = <&kp F2>;
+            key-positions = <2 3>;
+        };
+
+        combo_up {
+            bindings = <&kp UP_ARROW>;
+            key-positions = <19 7>;
+        };
+
+        combo_down {
+            bindings = <&kp DOWN_ARROW>;
+            key-positions = <19 31>;
         };
     };
 
@@ -63,46 +129,37 @@
 
         default_layer {
             bindings = <
-&kp TAB       &kp Q      &kp W     &kp E     &kp R  &kp T      &kp Y      &kp U  &kp I      &kp O     &kp P     &kp BSPC
-&kp ESC       &kp A      &kp S     &kp D     &kp F  &kp G      &kp H      &kp J  &kp K      &kp L     &kp SEMI  &kp APOS
-&kp LSHIFT    &kp Z      &kp X     &kp C     &kp V  &kp B      &kp N      &kp M  &kp COMMA  &kp DOT   &kp FSLH  &mt RSHIFT ENTER
-&caps CAPS 0  &kp LCTRL  &kp LALT  &kp LGUI  &mo 1  &kp SPACE  &kp SPACE  &mo 2  &kp LEFT   &kp DOWN  &kp UP    &kp RIGHT
+&kp TAB        &kp Q   &kp W   &kp E            &kp R        &kp T      &kp Y        &kp U        &kp I          &kp O    &kp P     &kp BSPC
+&mt LCTRL ESC  &kp A   &kp S   &kp D            &kp F        &kp G      &kp H        &kp J        &kp K          &kp L    &kp SEMI  &kp APOS
+&kp LSHIFT     &kp Z   &kp X   &kp C            &kp V        &kp B      &kp N        &kp M        &kp COMMA      &kp DOT  &kp FSLH  &mt RSHIFT RIGHT_GUI
+&trans         &trans  &trans  &lt 2 BACKSPACE  &lt 1 SPACE  &kp LCTRL  &lt 3 ENTER  &lt 1 SPACE  &kp RIGHT_ALT  &trans   &trans    &trans
             >;
         };
 
         lower_layer {
             bindings = <
-&kp LS(TILDE)  &kp LS(EXCL)  &kp LS(AT)  &kp LS(POUND)  &kp LS(DLLR)  &kp LS(PRCNT)  &kp LS(CARET)  &kp LS(AMPS)   &kp LS(STAR)  &kp LS(LPAR)  &kp LS(RPAR)  &trans
-&kp DEL        &kp F1        &kp F2      &kp F3         &kp F4        &kp F5         &kp F6         &kp LS(UNDER)  &kp LS(PLUS)  &kp LS(LBRC)  &kp LS(RBRC)  &kp LS(PIPE)
-&trans         &kp F7        &kp F8      &kp F9         &kp F10       &kp F11        &kp F12        &kp LS(NUHS)   &kp LS(NUBS)  &kp HOME      &kp END       &trans
-&trans         &trans        &trans      &trans         &trans        &trans         &trans         &mo 3          &kp C_NEXT    &kp C_VOL_DN  &kp C_VOL_UP  &kp C_PP
+&kp LS(TILDE)    &kp LS(NUMBER_1)   &kp LS(AT)  &kp LS(POUND)  &kp LS(DLLR)  &kp LS(PRCNT)  &kp LS(CARET)  &kp LS(AMPS)   &kp LS(STAR)   &kp LS(LPAR)    &kp LS(RPAR)   &kp LS(BSLH)
+&kp GRAVE        &kp N1             &kp N2      &kp N3         &kp N4        &kp N5         &kp N6         &kp N7         &kp N8         &kp N9          &kp N0         &kp BACKSLASH
+&kp C_VOLUME_UP  &kp C_VOLUME_DOWN  &kp C_MUTE  &kp DEL        &kp MINUS     &kp LS(MINUS)  &kp EQUAL      &kp LS(EQUAL)  &kp LS(COMMA)  &kp LS(PERIOD)  &kp LS(SLASH)  &kp RSHFT
+&bt BT_SEL 0     &bt BT_CLR         &trans      &trans         &trans        &trans         &trans         &trans         &trans         &trans          &trans         &trans
             >;
         };
 
         raise_layer {
             bindings = <
-&kp GRAVE  &kp N1  &kp N2  &kp N3  &kp N4   &kp N5   &kp N6   &kp N7     &kp N8      &kp N9        &kp N0        &trans
-&kp DEL    &kp F1  &kp F2  &kp F3  &kp F4   &kp F5   &kp F6   &kp MINUS  &kp EQUAL   &kp LBKT      &kp RBKT      &kp BSLH
-&trans     &kp F7  &kp F8  &kp F9  &kp F10  &kp F11  &kp F12  &kp NUHS   &kp NUBS    &kp PG_UP     &kp PG_DN     &trans
-&trans     &trans  &trans  &trans  &mo 3    &trans   &trans   &trans     &kp C_NEXT  &kp C_VOL_DN  &kp C_VOL_UP  &kp C_PP
+&kp F1     &kp F2  &kp F3        &kp F4          &kp F5          &kp F6           &kp F7          &kp F8    &kp F9       &kp F10        &kp F11     &kp F12
+&kp LCTRL  &trans  &msc SCRL_UP  &msc SCRL_DOWN  &kp K_BACK      &kp K_FORWARD    &kp LEFT_ARROW  &kp DOWN  &kp UP       &kp RIGHT      &kp DELETE  &kp INSERT
+&trans     &trans  &trans        &trans          &msc SCRL_LEFT  &msc SCRL_RIGHT  &kp HOME        &kp END   &kp PAGE_UP  &kp PAGE_DOWN  &trans      &trans
+&trans     &trans  &trans        &trans          &trans          &trans           &trans          &trans    &trans       &trans         &trans      &trans
             >;
         };
 
-        adjust_layer {
+        layer_3 {
             bindings = <
-&bt BT_CLR  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4  &kp KP_NUMLOCK   &kp KP_N7   &kp KP_N8   &kp KP_N9     &kp KP_EQUAL  &trans
-&trans      &trans        &trans        &trans        &trans        &trans        &kp KP_DIVIDE    &kp KP_N4   &kp KP_N5   &kp KP_N6     &kp KP_MINUS  &trans
-&trans      &trans        &trans        &trans        &trans        &trans        &kp KP_MULTIPLY  &kp KP_N1   &kp KP_N2   &kp KP_N3     &kp KP_PLUS   &kp KP_ENTER
-&tog 4      &trans        &trans        &trans        &trans        &trans        &kp KP_N0        &kp KP_DOT  &kp C_NEXT  &kp C_VOL_DN  &kp C_VOL_UP  &kp C_PP
-            >;
-        };
-
-        steno_layer {
-            bindings = <
-&none   &kp Q  &kp W  &kp E   &kp R  &kp T  &kp Y  &kp U  &kp I   &kp O  &kp P     &kp LBKT
-&none   &kp A  &kp S  &kp D   &kp F  &kp G  &kp H  &kp J  &kp K   &kp L  &kp SEMI  &kp APOS
-&none   &none  &none  &none   &none  &none  &none  &none  &none   &none  &none     &none
-&tog 4  &none  &none  &kp N1  &kp C  &kp V  &kp N  &kp M  &kp N0  &none  &none     &none
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
             >;
         };
     };
