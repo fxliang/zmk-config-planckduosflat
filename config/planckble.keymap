@@ -14,7 +14,26 @@
 };
 
 / {
-    combos { compatible = "zmk,combos"; };
+    combos {
+        compatible = "zmk,combos";
+
+        enter {
+            bindings = <&kp RET>;
+            key-positions = <17 18>;
+            timeout-ms = <50>;
+            layers = <0>;
+        };
+
+        lshft {
+            bindings = <&kp LSHFT>;
+            key-positions = <14 15>;
+        };
+
+        rshft {
+            bindings = <&kp RSHFT>;
+            key-positions = <20 21>;
+        };
+    };
 
     behaviors {
         auto_shift: auto_shift {
