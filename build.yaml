@@ -15,5 +15,8 @@
 include:
   - board: nice_nano_v2
     shield: planckble_left
+    snipppet: studio-rpc-usb-uart
   - board: nice_nano_v2
     shield: planckble_right
+    snipppet: studio-rpc-usb-uart
+
