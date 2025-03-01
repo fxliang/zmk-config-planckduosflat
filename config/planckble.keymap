@@ -129,10 +129,10 @@
 
         default_layer {
             bindings = <
-&kp TAB        &kp Q   &kp W   &kp E            &kp R        &kp T      &kp Y        &kp U        &kp I          &kp O    &kp P     &kp BSPC
-&mt LCTRL ESC  &kp A   &kp S   &kp D            &kp F        &kp G      &kp H        &kp J        &kp K          &kp L    &kp SEMI  &kp APOS
-&kp LSHIFT     &kp Z   &kp X   &kp C            &kp V        &kp B      &kp N        &kp M        &kp COMMA      &kp DOT  &kp FSLH  &mt RSHIFT RIGHT_GUI
-&trans         &trans  &trans  &lt 2 BACKSPACE  &lt 1 SPACE  &kp LCTRL  &lt 3 ENTER  &lt 1 SPACE  &kp RIGHT_ALT  &trans   &trans    &trans
+&kp TAB         &kp Q         &kp W   &kp E            &kp R        &kp T      &kp Y        &kp U        &kp I          &kp O    &kp P     &kp BSPC
+&mt LCTRL ESC   &kp A         &kp S   &kp D            &kp F        &kp G      &kp H        &kp J        &kp K          &kp L    &kp SEMI  &kp APOS
+&kp LSHIFT      &kp Z         &kp X   &kp C            &kp V        &kp B      &kp N        &kp M        &kp COMMA      &kp DOT  &kp FSLH  &mt RSHIFT RIGHT_GUI
+&bt BT_CLR_ALL  &bt BT_SEL 0  &trans  &lt 2 BACKSPACE  &lt 1 SPACE  &kp LCTRL  &lt 3 ENTER  &lt 1 SPACE  &kp RIGHT_ALT  &trans   &trans    &trans
             >;
         };
 
@@ -141,7 +141,7 @@
 &kp LS(TILDE)    &kp LS(NUMBER_1)   &kp LS(AT)  &kp LS(POUND)  &kp LS(DLLR)  &kp LS(PRCNT)  &kp LS(CARET)  &kp LS(AMPS)   &kp LS(STAR)   &kp LS(LPAR)    &kp LS(RPAR)   &kp LS(BSLH)
 &kp GRAVE        &kp N1             &kp N2      &kp N3         &kp N4        &kp N5         &kp N6         &kp N7         &kp N8         &kp N9          &kp N0         &kp BACKSLASH
 &kp C_VOLUME_UP  &kp C_VOLUME_DOWN  &kp C_MUTE  &kp DEL        &kp MINUS     &kp LS(MINUS)  &kp EQUAL      &kp LS(EQUAL)  &kp LS(COMMA)  &kp LS(PERIOD)  &kp LS(SLASH)  &kp RSHFT
-&bt BT_SEL 0     &bt BT_CLR         &trans      &trans         &trans        &trans         &trans         &trans         &trans         &trans          &trans         &trans
+&trans           &trans             &trans      &trans         &trans        &trans         &trans         &trans         &trans         &trans          &trans         &trans
             >;
         };
 
